@@ -1,0 +1,51 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "umbrella-sampling",
+    "section": "",
+    "text": "This file will become your README and also the index of your documentation."
+  },
+  {
+    "objectID": "index.html#install",
+    "href": "index.html#install",
+    "title": "umbrella-sampling",
+    "section": "Install",
+    "text": "Install\npip install umbrella_sampling"
+  },
+  {
+    "objectID": "index.html#how-to-use",
+    "href": "index.html#how-to-use",
+    "title": "umbrella-sampling",
+    "section": "How to use",
+    "text": "How to use\nFill me in please! Don’t forget code examples:\n\n1+1\n\n2"
+  },
+  {
+    "objectID": "umbrella.html",
+    "href": "umbrella.html",
+    "title": "umbrella",
+    "section": "",
+    "text": "source\n\nbiased_potential\n\n biased_potential (cv_value, target_value, force_constant)\n\n\nsource\n\n\ncompute_cv\n\n compute_cv (config)\n\nCheck that math works\n\ntest_eq(biased_potential(10.0, 5, 0.25), 3.125)\n\n\n# def run_simulation_for_window(target_value, force_constant):\n#     # Run the MD simulation with the biasing potential\n#     configs = []\n#     for step in range(num_steps):\n#         config = generate_new_config()  # Using MD\n#         cv_value = compute_cv(config)\n#         energy = compute_energy(config) + biased_potential(cv_value, target_value, force_constant)\n#         if accept_new_config(energy):  # Based on Metropolis criterion or MD integration\n#             configs.append(config)\n#     return configs\n\n# # Main loop for umbrella sampling\n# all_configs = []\n# for window in windows:\n#     configs = run_simulation_for_window(target_value=window.target_value, force_constant=window.force_constant)\n#     all_configs.extend(configs)\n\n# Post-process with WHAM to obtain free energy profile\n# free_energy_profile = wham(all_configs)"
+  },
+  {
+    "objectID": "file_io.html",
+    "href": "file_io.html",
+    "title": "file-io",
+    "section": "",
+    "text": "source"
+  },
+  {
+    "objectID": "file_io.html#grab-energy-of-casscf-jobs",
+    "href": "file_io.html#grab-energy-of-casscf-jobs",
+    "title": "file-io",
+    "section": "Grab energy of casscf jobs",
+    "text": "Grab energy of casscf jobs\n\ns1_energy = get_casscf_energy_of_state(Path('../examples/tc-outfile/tc.out'), state=2)\nprint(f\"s1 energy: {s1_energy}\")\ntest_close(get_casscf_energy_of_state(Path('../examples/tc-outfile/tc.out'), state=1), -750.98527871713941, eps=1e-6)\n\ns1 energy: -750.8831979447649\n\n\n\nsource\n\nget_cas_tdip_of_states\n\n get_cas_tdip_of_states (file:pathlib.Path)\n\nReturns transition dipole moment information of requested states\n\n\n\n\nType\nDetails\n\n\n\n\nfile\nPath\nPath to TC output file\n\n\nReturns\ndict"
+  },
+  {
+    "objectID": "file_io.html#can-also-get-transition-dipole-moment-info-from-terachem-output-file",
+    "href": "file_io.html#can-also-get-transition-dipole-moment-info-from-terachem-output-file",
+    "title": "file-io",
+    "section": "Can also get Transition Dipole Moment Info from TeraChem output file",
+    "text": "Can also get Transition Dipole Moment Info from TeraChem output file\n\ntdip_test = [{'state1': 1,\n  'state2': 2,\n  't_x': 3.8931,\n  't_y': -0.7637,\n  't_z': 0.0162,\n  't_mag': 3.9673,\n  'osc': 1.0711},\n {'state1': 1,\n  'state2': 3,\n  't_x': -0.1401,\n  't_y': 0.1908,\n  't_z': 0.5539,\n  't_mag': 0.6023,\n  'osc': 0.0366},\n {'state1': 2,\n  'state2': 3,\n  't_x': -0.7214,\n  't_y': 0.1486,\n  't_z': -0.0227,\n  't_mag': 0.7369,\n  'osc': 0.0178}]\n\n\ntest_eq(get_cas_tdip_of_states(Path('../examples/tc-outfile/tc.out')), tdip_test)"
+  }
+]
