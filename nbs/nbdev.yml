@@ -1,0 +1,9 @@
+project:
+  output-dir: _docs
+
+website:
+  title: "umbrella-sampling"
+  site-url: "https://pablo-unzueta.github.io/umbrella-sampling"
+  description: "umbrella sampling for custom cv's"
+  repo-branch: main
+  repo-url: "https://github.com/pablo-unzueta/umbrella-sampling"
