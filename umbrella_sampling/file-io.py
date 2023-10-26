@@ -17,12 +17,11 @@ def get_casscf_energy_of_state(
 # %% ../nbs/01_file_io.ipynb 6
 def get_cas_tdip_of_states(
     file: Path,  # Path to TC output file
-    state1: int,  # State ID (1-indexed)
-    state2: int,  # State ID (1-indexed)
-) -> float:
-    """Returns transition dipole moment (in Debye) between two states"""
+) -> dict:
+    """Returns transition dipole moment information of requested states"""
+    tdip_info = []
     # pattern = r"(\d+) ->  (\d+)([ \t-]+)([\d.-]+)([ \t-]+)([\d.-]+)([ \t-]+)([\d.-]+)([ \t-]+)([\d.-]+)([ \t-]+)([\d.-]+)"
-    pattern = r"(\d+) ->  (\d+)([ \t-]+)([-?\d.]+)([ \t-]+)([-?\d.]+)([ \t-]+)([-?\d.]+)([ \t-]+)([-?\d.]+)([ \t-]+)([-?\d.]+)"
+    pattern = r"(\d+) ->  (\d+)([ \s*]+)([-?\d.]+)([ \s*]+)([-?\d.]+)([ \s*]+)([-?\d.]+)([ \s*]+)([-?\d.]+)([ \s*]+)([-?\d.]+)"
     tdip_string = "Singlet state electronic transitions:"
     end_string = "Singlet state velocity transition dipole moments:"
     tdip_section = False
@@ -36,5 +35,9 @@ def get_cas_tdip_of_states(
 
             if tdip_section:
                 match = re.search(pattern, line)
+                # delete groups with only whitespace
                 if match:
-                    print(match.groups())
+                    # match = [m for m in match.groups() if m.strip()]
+                    state_1, state_2, _, t_x, _, t_y, _, t_z, _, t_mag, _, osc = match.groups()
+                    tdip_info.append({"state1": int(state_1), "state2": int(state_2), "t_x": float(t_x), "t_y": float(t_y), "t_z": float(t_z), "t_mag": float(t_mag), "osc": float(osc)})
+    return tdip_info
