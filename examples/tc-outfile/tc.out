@@ -1,0 +1,744 @@
+| Startfile from command line: misc_options
+
+
+|       ***********************************************************
+|       *                 TeraChem v1.9-2023.10-dev               *
+|       *                   Development Version                   *
+|       *           Chemistry at the Speed of Graphics!           *
+|       ***********************************************************
+|       * This program may only be used in connection with        *
+|       * a valid license from PetaChem, LLC. Use of this program *
+|       * or results thereof indicates acceptance of all terms    *
+|       * and conditions stated in the license and that a valid   *
+|       * license agreement between the user and PetaChem, LLC    *
+|       * exists. PetaChem, LLC does not warrant the correctness  *
+|       * of results or their suitability for any purpose.        *
+|       * Please email bugs, suggestions, and comments to         *
+|       *                  help@petachem.com                      *
+|       *                                                         *
+|       ***********************************************************
+
+
+|       ***********************************************************
+|       *  Compiled by amaz7336     Wed Oct 25 15:15:52 PDT 2023  *
+|       *  Supported architecture SMs: 52 61 70 80 90             *
+|       *  Build cuda_12.2.r12.2/compiler.33053471_0              *
+|       *  Git Version: 64212e63d0c508aa3ba07c11161ed873cda1042f  *
+|       ***********************************************************
+
+
+| Job started   Wed Oct 25 15:21:41 2023
+| On fire-12-05 (available memory: 54504 MB)
+
+| ######################################### RUNTIME INFO ##########################################
+| terachem  misc_options 
+
+|  NVRM version: NVIDIA UNIX x86_64 Kernel Module  525.89.02  Wed Feb  1 23:23:25 UTC 2023
+|  GCC version:  gcc version 11.4.0 (Ubuntu 11.4.0-1ubuntu1~22.04) 
+
+|  	linux-vdso.so.1 (0x00007ffdbfdf1000)
+|  	libcurl.so.4 => /lib/x86_64-linux-gnu/libcurl.so.4 (0x00007f35951ae000)
+|  	libz.so.1 => /home/punzueta/.conda/envs/spk/lib/libz.so.1 (0x00007f3595194000)
+|  	libmpi.so.12 => /home/amaz7336/HgGit/production_terachem_git_sacasscf_dipole_gradient/build/lib/libmpi.so.12 (0x00007f3593800000)
+|  	libdftbplus.so => /home/amaz7336/HgGit/production_terachem_git_sacasscf_dipole_gradient/build/lib/libdftbplus.so (0x00007f35934c8000)
+|  	libfsockets.so => /home/amaz7336/HgGit/production_terachem_git_sacasscf_dipole_gradient/build/lib/libfsockets.so (0x00007f359518b000)
+|  	libxmlf90.so => /home/amaz7336/HgGit/production_terachem_git_sacasscf_dipole_gradient/build/lib/libxmlf90.so (0x00007f3595164000)
+|  	libthcbox.so.1 => /home/amaz7336/HgGit/production_terachem_git_sacasscf_dipole_gradient/build/lib/libthcbox.so.1 (0x00007f35916ab000)
+|  	libOpenMM.so => /home/amaz7336/HgGit/production_terachem_git_sacasscf_dipole_gradient/build/lib/libOpenMM.so (0x00007f3591251000)
+|  	libnvToolsExt.so.1 => /home/amaz7336/HgGit/production_terachem_git_sacasscf_dipole_gradient/build/lib/libnvToolsExt.so.1 (0x00007f3591000000)
+|  	libgpubox.so.1 => /home/amaz7336/HgGit/production_terachem_git_sacasscf_dipole_gradient/build/lib/libgpubox.so.1 (0x00007f3595157000)
+|  	libcpubox.so.1 => /home/amaz7336/HgGit/production_terachem_git_sacasscf_dipole_gradient/build/lib/libcpubox.so.1 (0x00007f3595151000)
+|  	libtensorbox.so.1 => /home/amaz7336/HgGit/production_terachem_git_sacasscf_dipole_gradient/build/lib/libtensorbox.so.1 (0x00007f3595136000)
+|  	libiobox.so.1 => /home/amaz7336/HgGit/production_terachem_git_sacasscf_dipole_gradient/build/lib/libiobox.so.1 (0x00007f359512e000)
+|  	libintbox.so.1 => /home/amaz7336/HgGit/production_terachem_git_sacasscf_dipole_gradient/build/lib/libintbox.so.1 (0x00007f3538eb5000)
+|  	libatmx2cbox.so.1 => /home/amaz7336/HgGit/production_terachem_git_sacasscf_dipole_gradient/build/lib/libatmx2cbox.so.1 (0x00007f359506d000)
+|  	libsqmbox.so.1 => /home/amaz7336/HgGit/production_terachem_git_sacasscf_dipole_gradient/build/lib/libsqmbox.so.1 (0x00007f3538b09000)
+|  	libgridbox.so.1 => /home/amaz7336/HgGit/production_terachem_git_sacasscf_dipole_gradient/build/lib/libgridbox.so.1 (0x00007f3537f9a000)
+|  	libdftbox.so.1 => /home/amaz7336/HgGit/production_terachem_git_sacasscf_dipole_gradient/build/lib/libdftbox.so.1 (0x00007f3537eab000)
+|  	libcibox.so.1 => /home/amaz7336/HgGit/production_terachem_git_sacasscf_dipole_gradient/build/lib/libcibox.so.1 (0x00007f353785f000)
+|  	libccbox.so.1 => /home/amaz7336/HgGit/production_terachem_git_sacasscf_dipole_gradient/build/lib/libccbox.so.1 (0x00007f35373ca000)
+|  	libsimbox.so.1 => /home/amaz7336/HgGit/production_terachem_git_sacasscf_dipole_gradient/build/lib/libsimbox.so.1 (0x00007f359504e000)
+|  	liboptbox.so.1 => /home/amaz7336/HgGit/production_terachem_git_sacasscf_dipole_gradient/build/lib/liboptbox.so.1 (0x00007f359121c000)
+|  	libssl.so.3 => /home/punzueta/.conda/envs/spk/lib/libssl.so.3 (0x00007f3537327000)
+|  	libcrypto.so.3 => /home/punzueta/.conda/envs/spk/lib/libcrypto.so.3 (0x00007f3536ed1000)
+|  	libcuda.so.1 => /lib/x86_64-linux-gnu/libcuda.so.1 (0x00007f35351f1000)
+|  	libcudart.so.12 => /home/amaz7336/HgGit/production_terachem_git_sacasscf_dipole_gradient/build/lib/libcudart.so.12 (0x00007f3534e00000)
+|  	libcublas.so.12 => /home/amaz7336/HgGit/production_terachem_git_sacasscf_dipole_gradient/build/lib/libcublas.so.12 (0x00007f352e600000)
+|  	libcufft.so.11 => /home/amaz7336/HgGit/production_terachem_git_sacasscf_dipole_gradient/build/lib/libcufft.so.11 (0x00007f3523800000)
+|  	libcusparse.so.12 => /home/amaz7336/HgGit/production_terachem_git_sacasscf_dipole_gradient/build/lib/libcusparse.so.12 (0x00007f3513a00000)
+|  	libcusolver.so.11 => /home/amaz7336/HgGit/production_terachem_git_sacasscf_dipole_gradient/build/lib/libcusolver.so.11 (0x00007f350c800000)
+|  	libcublasLt.so.12 => /home/amaz7336/HgGit/production_terachem_git_sacasscf_dipole_gradient/build/lib/libcublasLt.so.12 (0x00007f34ea000000)
+|  	libimf.so => /home/amaz7336/HgGit/production_terachem_git_sacasscf_dipole_gradient/build/lib/libimf.so (0x00007f34e9800000)
+|  	libsvml.so => /home/amaz7336/HgGit/production_terachem_git_sacasscf_dipole_gradient/build/lib/libsvml.so (0x00007f34e7800000)
+|  	libirng.so => /home/amaz7336/HgGit/production_terachem_git_sacasscf_dipole_gradient/build/lib/libirng.so (0x00007f34e7400000)
+|  	libstdc++.so.6 => /home/punzueta/.conda/envs/spk/lib/libstdc++.so.6 (0x00007f351384c000)
+|  	libm.so.6 => /lib/x86_64-linux-gnu/libm.so.6 (0x00007f34e9f19000)
+|  	libiomp5.so => /home/amaz7336/HgGit/production_terachem_git_sacasscf_dipole_gradient/build/lib/libiomp5.so (0x00007f34e6e00000)
+|  	libcilkrts.so.5 => /home/amaz7336/HgGit/production_terachem_git_sacasscf_dipole_gradient/build/lib/libcilkrts.so.5 (0x00007f34e6a00000)
+|  	libgcc_s.so.1 => /home/punzueta/.conda/envs/spk/lib/libgcc_s.so.1 (0x00007f3535134000)
+|  	libintlc.so.5 => /home/amaz7336/HgGit/production_terachem_git_sacasscf_dipole_gradient/build/lib/libintlc.so.5 (0x00007f34e6600000)
+|  	libc.so.6 => /lib/x86_64-linux-gnu/libc.so.6 (0x00007f34e63d8000)
+|  	/lib64/ld-linux-x86-64.so.2 (0x00007f3595264000)
+|  	libnghttp2.so.14 => /lib/x86_64-linux-gnu/libnghttp2.so.14 (0x00007f353510a000)
+|  	libidn2.so.0 => /lib/x86_64-linux-gnu/libidn2.so.0 (0x00007f35350e9000)
+|  	librtmp.so.1 => /lib/x86_64-linux-gnu/librtmp.so.1 (0x00007f35350ca000)
+|  	libssh.so.4 => /lib/x86_64-linux-gnu/libssh.so.4 (0x00007f352e593000)
+|  	libpsl.so.5 => /lib/x86_64-linux-gnu/libpsl.so.5 (0x00007f3595036000)
+|  	libgssapi_krb5.so.2 => /lib/x86_64-linux-gnu/libgssapi_krb5.so.2 (0x00007f352e53f000)
+|  	libldap-2.5.so.0 => /lib/x86_64-linux-gnu/libldap-2.5.so.0 (0x00007f35237a1000)
+|  	liblber-2.5.so.0 => /lib/x86_64-linux-gnu/liblber-2.5.so.0 (0x00007f359120b000)
+|  	libzstd.so.1 => /home/punzueta/.conda/envs/spk/lib/libzstd.so.1 (0x00007f350c73c000)
+|  	libbrotlidec.so.1 => /home/punzueta/.conda/envs/spk/lib/libbrotlidec.so.1 (0x00007f35350bc000)
+|  	librt.so.1 => /lib/x86_64-linux-gnu/librt.so.1 (0x00007f35350b7000)
+|  	libdl.so.2 => /lib/x86_64-linux-gnu/libdl.so.2 (0x00007f35350b2000)
+|  	libifport.so.5 => /home/amaz7336/HgGit/production_terachem_git_sacasscf_dipole_gradient/build/lib/libifport.so.5 (0x00007f34e6000000)
+|  	libifcoremt.so.5 => /home/amaz7336/HgGit/production_terachem_git_sacasscf_dipole_gradient/build/lib/libifcoremt.so.5 (0x00007f34e726a000)
+|  	libpthread.so.0 => /lib/x86_64-linux-gnu/libpthread.so.0 (0x00007f35350ad000)
+|  	libnvJitLink.so.12 => /home/amaz7336/HgGit/production_terachem_git_sacasscf_dipole_gradient/build/lib/libnvJitLink.so.12 (0x00007f34e2e00000)
+|  	libunistring.so.2 => /lib/x86_64-linux-gnu/libunistring.so.2 (0x00007f34e6c56000)
+|  	libgnutls.so.30 => /lib/x86_64-linux-gnu/libgnutls.so.30 (0x00007f34e2c15000)
+|  	libhogweed.so.6 => /lib/x86_64-linux-gnu/libhogweed.so.6 (0x00007f34e9ed1000)
+|  	libnettle.so.8 => /lib/x86_64-linux-gnu/libnettle.so.8 (0x00007f34e77ba000)
+|  	libgmp.so.10 => /lib/x86_64-linux-gnu/libgmp.so.10 (0x00007f34e697e000)
+|  	libkrb5.so.3 => /lib/x86_64-linux-gnu/libkrb5.so.3 (0x00007f34e68b3000)
+|  	libk5crypto.so.3 => /lib/x86_64-linux-gnu/libk5crypto.so.3 (0x00007f3534dd1000)
+|  	libcom_err.so.2 => /lib/x86_64-linux-gnu/libcom_err.so.2 (0x00007f3534dcb000)
+|  	libkrb5support.so.0 => /lib/x86_64-linux-gnu/libkrb5support.so.0 (0x00007f352e531000)
+|  	libsasl2.so.2 => /lib/x86_64-linux-gnu/libsasl2.so.2 (0x00007f34e9eb6000)
+|  	libbrotlicommon.so.1 => /home/punzueta/.conda/envs/spk/lib/./libbrotlicommon.so.1 (0x00007f34e9e93000)
+|  	libp11-kit.so.0 => /lib/x86_64-linux-gnu/libp11-kit.so.0 (0x00007f34e629d000)
+|  	libtasn1.so.6 => /lib/x86_64-linux-gnu/libtasn1.so.6 (0x00007f34e77a2000)
+|  	libkeyutils.so.1 => /lib/x86_64-linux-gnu/libkeyutils.so.1 (0x00007f3534dc4000)
+|  	libresolv.so.2 => /lib/x86_64-linux-gnu/libresolv.so.2 (0x00007f34e97ec000)
+|  	libffi.so.8 => /home/punzueta/.conda/envs/spk/lib/libffi.so.8 (0x00007f350c730000)
+| #################################################################################################
+
+| Checking Amazon Cloud instance ID...   Not found
+| Cannot find license.dat file /home/amaz7336/HgGit/production_terachem_git_sacasscf_dipole_gradient/build/license.dat
+
+
+| TRYING THE NETWORK LICENSE...
+| Connecting to license server '54.208.252.40' port '8877'...
+| Connected!
+| Checking your license...
+
+| **************************************************************
+|  Greetings, Martinez Group! You have 1000 licenses in total
+|  IN USE: 14
+|  AVAILABLE: 986
+| **************************************************************
+
+-----------------------------------
+Processed Input file:
+                   prmtop GYC-A_spcfw_sphere.prmtop
+              coordinates frame.rst7
+                qmindices qmindices.dat
+                     gpus 1
+                    basis 6-31g*
+                   method hf
+                      run energy
+                  threall 1e-14
+                 convthre 1e-6
+                precision mixed
+                   charge -1
+                 spinmult 1
+                   scrdir scr
+                     mdbc spherical
+                    md_k1 10.0
+                    md_r1 24.3
+                      fon yes
+               fon_anneal no
+               fon_target 0.3
+          fon_temperature 0.3
+                     dftd d3
+                 casguess c0.casscf
+                   casscf yes
+                 alphacas yes
+                    alpha 0.67
+            castargetmult 1
+              cassinglets 3
+                   closed 55
+                   active 3
+               dcimaxiter 200
+                ahmaxiter 200
+            casscfmaxiter 250
+       casscftrustmaxiter 0
+      casscftrustconvthre 1.0e-4
+ castransdipolederivative yes
+                nacstate1 0
+                nacstate2 1
+                  $masses 
+                       13 h
+                     $end 
+-----------------------------------
+Jobname: frame
+Scratch data will be generated
+Scratch directory: scr
+| Random number seed: 1265747198
+
+XYZ coordinates frame.rst7
+Amber prmtop file GYC-A_spcfw_sphere.prmtop
+QM index file qmindices.dat
+Molden File Output: scr/frame.molden
+Using basis set: 6-31gs
+dmrgstart not found
+Spherical boundary conditions enabled
+  K1:  10.00 kcal/(mol*A**2)
+  R1:  24.30 A
+  K2:   0.00 kcal/(mol*A**2)
+  R2:   0.00 A
+Spin multiplicity: 1
+DIIS will use up to 10 vectors.
+Condition number limit for the DIIS overlap matrix is            0
+WF convergence threshold: 1.00e-06
+Using DIIS algorithm to converge WF
+Maximum number of SCF iterations: 100
+Incremental fock with rebuild every 8 iterations
+Will switch to conventional Fock if diffuse functions are detected
+X-matrix tolerance: 1.00e-04
+PRECISION: MIXED
+Single/Double precision threshold: 1.00e-05
+TeraChem will select linear algebra engine
+Using fractional orbital occupations
+Fractional occupations determined by gaussian broadening
+55 occupied orbitals will have integer occupation
+3 occupied orbitals will have fractional occupation
+kT is set to  0.300 a.u.
+DFT Functional requested: hf
+Method: Hartree-Fock  with dispersion correction
+Wavefunction: RESTRICTED
+
+ DFT-D code reimplemented following the
+ code by S.Grimme, University Bonn 
+ based on DFTD3 V3.2 Rev 0         
+ 
+Please cite DFT-D3 work done with this code as:
+S. Grimme, J. Antony, S. Ehrlich and H. Krieg,
+J. Chem. Phys. 132 (2010), 154104
+If used with BJ-damping cite also
+S. Grimme, S. Ehrlich and L. Goerigk,
+J. Comput. Chem. 32 (2011), 1456-1465
+For DFT-D2 the reference is
+S. Grimme, J. Comput. Chem., 27 (2006), 1787-1799
+Initial guess generated by maximum overlap
+
+Using OpenMM. QM/MM is enabled.
+The energies and gradients will have MM components, but this will be computed by OpenMM.
+
+********************************************
+***** SINGLE POINT ENERGY CALCULATIONS *****
+********************************************
+*************WARNING***************
+Unrecognized or unnecessary keywords:
+These are being ignored.
+   nacstate1 0
+   nacstate2 1
+   $masses 
+   13 h
+   $end 
+***********************************
+Starting TensorBox...
+| TeraChem will select linear algebra engine
+| Using cuSolver for matrix diagonalization
+
+| using 1 out of 1 CUDA devices
+|   Device 0: NVIDIA GeForce RTX 4090, 24217MB, CC 8.9 -- CPU THREAD 0
+| -------------------------------------------------------------------
+| CPU Memory Available: 16080.62 MegaWords 
+| GPU Memory Available: 2771.16 MegaWords 
+| Maximum recommended basis set size: 19400 basis functions
+|  (limited by GPU memory)
+| -------------------------------------------------------------------
+Direct Reaction Field : did not find any polarizabilities in prmtop file, all polarizabilities will be set to 0.
+The QM/MM charge correction is 1.65708e-10
+REMARK  Using OpenMM platform CPU
+Made it passed OpenMM system construction
+Number of MM atoms: 6001
+Number of QM atoms:   27 (including 0 link atoms)
+Number of MM atoms:   6001
+
+| Initialize GPUBox with 128 MW of memory
+
+Apply mass overrides from $masses
+Set mass of atom 13 type H to 2.014000
+Masses have been altered. Full set of masses in use:
+  Atom    Type   Mass
+--------- ---- ------------
+         1    C      12.0100000
+         2    H       1.0080000
+         3    C      12.0100000
+         4    H       1.0080000
+         5    H       1.0080000
+         6    C      12.0100000
+         7    N      14.0100000
+         8    N      14.0100000
+         9    C      12.0100000
+        10    O      16.0000000
+        11    C      12.0100000
+        12    C      12.0100000
+        13    H       2.0140000
+        14    C      12.0100000
+        15    C      12.0100000
+        16    H       1.0080000
+        17    C      12.0100000
+        18    H       1.0080000
+        19    C      12.0100000
+        20    H       1.0080000
+        21    C      12.0100000
+        22    H       1.0080000
+        23    C      12.0100000
+        24    O      16.0000000
+        25    H       1.0080000
+        26    H       1.0080000
+        27    H       1.0080000
+
+
+Basis set:       6-31gs
+Total atoms:     27
+Total charge:    -1
+Total electrons: 114 (57-alpha, 57-beta)
+Number electrons modeled by ECPs: 0
+Total orbitals:  262
+Total AO shells: 118 (70 S-shells; 32 P-shells; 16 D-shells; 0 F-shells; 0 G-shells)
+Spin multiplicity: 1
+Nuclear repulsion energy (QM atoms): 998.163844866200 a.u.
+
+Total charge from MM point charges: 1.00e
+
+
+**********************************************************
+*** WARNING! USING DEFAULT VDW PARAMETERS FOR QM ATOMS ***
+**********************************************************
+   TYPE       SIGMA       EPSILON
+     C      2.060000      0.080000
+     H      1.320000      0.022000
+     C      2.060000      0.080000
+     H      1.320000      0.022000
+     H      1.320000      0.022000
+     C      2.060000      0.080000
+     N      1.850000      0.200000
+     N      1.850000      0.200000
+     C      2.060000      0.080000
+     O      1.770000      0.152100
+     C      2.060000      0.080000
+     C      2.060000      0.080000
+     H      1.320000      0.022000
+     C      2.060000      0.080000
+     C      2.060000      0.080000
+     H      1.320000      0.022000
+     C      2.060000      0.080000
+     H      1.320000      0.022000
+     C      2.060000      0.080000
+     H      1.320000      0.022000
+     C      2.060000      0.080000
+     H      1.320000      0.022000
+     C      2.060000      0.080000
+     O      1.770000      0.152100
+     H      1.320000      0.022000
+     H      1.320000      0.022000
+     H      1.320000      0.022000
+DFTD Energy:    -0.2250465 hartree
+
+                      *** Start SCF Iterations ***
+
+ Iter     DIIS Error       Energy change         Energy        Time(s)
+------------------------------------------------------------------------
+Initial temperature is 0.300000
+| Purifying guess...
+| Trace of guess 114.00000000, trace of guess*guess 114.00000000,  electron number 114.00000000 
+| Guess is well-conditioned: purify...
+| Purification run on GPU (double precision)  using TC2 purification.
+| Density matrix purification finished after a total of 0 matrix multiplies
+|    1     0.3185031470    -746.6189344270    -746.6189344270     0.18  
+|    2     0.1721912362      -3.0830679272    -749.7020023542     0.14  
+|    3     0.1261927718      -0.6392855739    -750.3412879281     0.12  
+|    4     0.0412568830      -0.3505302632    -750.6918181913     0.11  
+|    5     0.0307970769      -0.0377676115    -750.7295858028     0.11  
+|    6     0.0027789995      -0.0239396117    -750.7535254144     0.10  
+|    7     0.0019823570      +0.0020575004    -750.7514679140     0.09  
+|    8     0.0007636141      +0.0004160778    -750.7510518362     0.08  
+|    9     0.0003710909      +0.0002389479    -750.7508128883     0.14  
+|   10     0.0002656119      -0.0000562275    -750.7508691158     0.07  
+|   11     0.0001725573      -0.0000274121    -750.7508965279     0.07  
+|   12     0.0001174512      -0.0000083710    -750.7509048989     0.06  
+|   13     0.0000523168      +0.0000179674    -750.7508869315     0.06  
+|   14     0.0000197783      +0.0000055368    -750.7508813947     0.06  
+|   15     0.0000069049      +0.0000036847    -750.7508777100     0.05  
+|   16     0.0000016556      +0.0000002087    -750.7508775012     0.05  
+|   17     0.0000009072      -0.0000002790    -750.7508777802     0.13  
+------------------------------------------------------------------------
+FINAL ENERGY: -750.7508777802 a.u.
+| WARNING: Final energy is higher than the lowest energy by    0.0026476.
+Fractional Occupation Entropy: 2.0296538017
+Mermin Free Energy:            -751.3597739207
+DISPERSION CONTRIBUTION TO ENERGY: -0.2250464657 a.u.
+HOMO-LUMO GAP: 4.629 eV
+CENTER OF MASS: {0.000000, 0.000000, 0.000000} ANGS
+QM  DIPOLE MOMENT: {-18.658309, 4.343413, -2.165510} (|D| = 19.279190) DEBYE
+MM  DIPOLE MOMENT: {24.386774, -52.343005, -34.894623} (|D| = 67.469546) DEBYE
+TOT DIPOLE MOMENT: {5.728465, -47.999592, -37.060133} (|D| = 60.911654) DEBYE
+Writing out molden info
+
+Running Mulliken population analysis...
+
+
+  Active Space Parameters
+--------------------------------------------
+Number of closed orbitals:              55
+Number of active orbitals:               3
+Number of virtual orbitals:            204
+Number of molecular orbitals:          262
+Number of basis functions:             262
+Number of active electrons:              4
+Number of alpha electrons:               2
+Number of beta electrons:                2
+
+  Orbital      Energy        Occupation
+-----------------------------------------
+     54       -0.397810        1.000000
+     55       -0.337319        1.000000
+     56       -0.294049        0.811878
+     57       -0.187986        0.702392
+     58       -0.017864        0.485730
+     59        0.167012        0.000000
+     60        0.191264        0.000000
+
+  CAS Parameters
+--------------------------------------------
+Number of determinants:                  9
+Number of singlet CSFs:                  6
+Number of doublet CSFs:                  0
+Number of triplet CSFs:                  3
+Number of quartet CSFs:                  0
+Number of quintet CSFs:                  0
+Number of sextet CSFs:                   0
+Number of septet CSFs:                   0
+Number of singlet states:                3
+Number of doublet states:                0
+Number of triplet states:                0
+Number of quartet states:                0
+Number of quintet states:                0
+Number of sextet states:                 0
+Number of septet states:                 0
+Using the hard-coded solver
+
+Starting Two-Step Algorithm
+
+| Iter         CASSCF Energy           Energy Change           Max Orb. Grad.    Time (s) 
+|-----------------------------------------------------------------------------------------
+|   1         -750.8957230247         -750.8957230247            0.0247856521        0.37
+|   2         -750.8983424989           -0.0026194742            0.0115117924        0.28
+|   3         -750.8993683820           -0.0010258831            0.0103302656        0.26
+|   4         -750.8999531358           -0.0005847538            0.0045042683        0.25
+|   5         -750.9004964248           -0.0005432891            0.0029614367        0.25
+|   6         -750.9007780912           -0.0002816664            0.0016732093        0.25
+|   7         -750.9008491373           -0.0000710460            0.0006009278        0.23
+|   8         -750.9008559591           -0.0000068218            0.0003074694        0.20
+|   9         -750.9008573816           -0.0000014224            0.0002320856        0.18
+|  10         -750.9008579146           -0.0000005331            0.0001748109        0.17
+|  11         -750.9008583100           -0.0000003953            0.0001094013        0.17
+|  12         -750.9008584709           -0.0000001609            0.0000491175        0.17
+|  13         -750.9008584957           -0.0000000249            0.0000286288        0.15
+|  14         -750.9008585055           -0.0000000098            0.0000160438        0.15
+|  15         -750.9008585099           -0.0000000044            0.0000074734        0.15
+|  16         -750.9008585115           -0.0000000016            0.0000031845        0.14
+|  17         -750.9008585120           -0.0000000005            0.0000011488        0.14
+|  18         -750.9008585120           -0.0000000001            0.0000003002        0.12
+
+
+Canonicalizing Orbitals...
+
+State Averaged Energy:                    -750.9008585311
+
+Singlet state  1 energy:       -750.98527871713941
+
+Singlet state  1 weight:          0.33333333333333
+
+|        -0.98823122160388  X56 X57
+|         0.11227640375067  X56 X58
+|         0.10169226620344  X57 X58
+
+Singlet state  2 energy:       -750.88319794476490
+
+Singlet state  2 weight:          0.33333333333333
+
+|        -0.67374234646840  X56 B57 A58
+|        -0.67374234646840  X56 A57 B58
+|         0.19824826793002  B56 A57 X58
+|         0.19824826793002  A56 B57 X58
+|         0.09522176183068  X56 X58
+|        -0.04193130174775  B56 X57 A58
+|        -0.04193130174775  A56 X57 B58
+|        -0.03013619184886  X57 X58
+
+Singlet state  3 energy:       -750.83409893130204
+
+Singlet state  3 weight:          0.33333333333333
+
+|         0.65370242619758  X56 X58
+|        -0.49588945370674  B56 X57 A58
+|        -0.49588945370674  A56 X57 B58
+|        -0.21737813887774  X57 X58
+|        -0.11249624671566  B56 A57 X58
+|        -0.11249624671566  A56 B57 X58
+|         0.05892524737371  X56 X57
+|         0.04911306495241  X56 B57 A58
+|         0.04911306495241  X56 A57 B58
+
+  Root   Mult.   Total Energy (a.u.)   Ex. Energy (a.u.)     Ex. Energy (eV)
+-------------------------------------------------------------------------------
+     1  singlet       -750.98527872
+     2  singlet       -750.88319794          0.10208077          2.77775869
+     3  singlet       -750.83409893          0.15117979          4.11381060
+
+|  Root   Mult.      Ex. Wavelength (nm)
+|-----------------------------------------
+|     2  singlet        446.34626199
+|     3  singlet        301.38534009
+
+Singlet state dipole moments:
+
+  Root       Dx         Dy         Dz         |D|  (Debye)
+------------------------------------------------------------
+     1   -20.8992     4.8038    -2.4483    21.5835
+     2   -18.0238     4.1161    -2.6499    18.6767
+     3   -17.0629     4.2445    -1.3963    17.6383
+
+Singlet state electronic transitions:
+
+ Transition      Tx        Ty        Tz       |T|    Osc. (a.u.) 
+-----------------------------------------------------------------
+   1 ->  2     3.8931   -0.7637    0.0162    3.9673    1.0711
+   1 ->  3    -0.1401    0.1908    0.5539    0.6023    0.0366
+   2 ->  3    -0.7214    0.1486   -0.0227    0.7369    0.0178
+
+Singlet state velocity transition dipole moments:
+
+ Transition      Px        Py        Pz       |P|    Osc. (a.u.) 
+-----------------------------------------------------------------
+   1 ->  2    -0.4515    0.0893    0.0074    0.4603    1.3836
+   1 ->  3     0.0370   -0.0425   -0.1139    0.1271    0.0712
+   2 ->  3     0.1300   -0.0299   -0.0128    0.1340    0.2439
+
+Singlet state magnetic transition dipole moments and rotational strengths:
+
+ Transition      Lx        Ly        Lz        |L|    R(vel) (a.u.)
+--------------------------------------------------------------------
+   1 ->  2     0.0871    0.7090   -0.1600    0.7320    0.2236
+   1 ->  3     0.0150    0.1455   -0.0425    0.1523   -0.0052
+   2 ->  3    -0.0227   -0.1838    0.0400    0.1894    0.0413
+
+Singlet state electric quadrupole moments (Cartesian):
+Operator origin (a.u.):     0.000000,     0.000000,     0.000000 
+
+ Root     Qxy        Qxz        Qyz        Qxx        Qyy        Qzz       R^2
+--------------------------------------------------------------------------------------------
+    1    86.4842   338.2832   128.0641    79.6142   -46.4111   508.6200   541.8231
+    2    86.0416   337.0727   127.8964    80.2497   -46.4838   507.9705   541.7363
+    3    84.5475   337.6044   127.6631    87.7739   -46.3299   507.4613   548.9053
+
+Singlet state electric transition quadrupole moments (Cartesian):
+
+ Transition     Qxy        Qxz        Qyz        Qxx        Qyy        Qzz       norm (a.u.)
+--------------------------------------------------------------------------------------------
+   1 ->  2    -2.9097    -0.6273    -0.3584    12.2026     0.4605    -0.9541    12.6101
+   1 ->  3    -2.1013     0.3172    -0.0227    10.4811     0.3486    -0.0325    10.7001
+   2 ->  3    -0.3215    -0.5564     0.2594     0.8686     0.1543     0.5175     1.2354
+
+Coupled Perturbed Equations:
+
+Beginning DIIS:
+
+| Iter              Residual                Time (s)   
+|------------------------------------------------------
+|   1		 4.2104252621		     0.24
+|   2		 2.5343050711		     0.23
+|   3		 1.7627630692		     0.22
+|   4		 0.6189157397		     0.20
+|   5		 0.2579048078		     0.18
+|   6		 0.0989589468		     0.17
+|   7		 0.0626223500		     0.15
+|   8		 0.0264520602		     0.14
+|   9		 0.0095458870		     0.24
+|  10		 0.0048782594		     0.12
+|  11		 0.0013244803		     0.10
+|  12		 0.0005441090		     0.09
+|  13		 0.0002027793		     0.09
+|  14		 0.0000901446		     0.08
+
+|Converged in 14 iterations:
+Coupled Perturbed Equations:
+
+Beginning DIIS:
+
+| Iter              Residual                Time (s)   
+|------------------------------------------------------
+|   1		 2.2133837040		     0.22
+|   2		 1.0643795427		     0.21
+|   3		 0.3830793250		     0.19
+|   4		 0.1861368197		     0.18
+|   5		 0.0782335936		     0.16
+|   6		 0.0278919126		     0.15
+|   7		 0.0156410750		     0.13
+|   8		 0.0082457831		     0.12
+|   9		 0.0028370280		     0.23
+|  10		 0.0010528520		     0.10
+|  11		 0.0005117065		     0.09
+|  12		 0.0002595077		     0.09
+|  13		 0.0001063450		     0.08
+|  14		 0.0000470307		     0.08
+
+|Converged in 14 iterations:
+Coupled Perturbed Equations:
+
+Beginning DIIS:
+
+| Iter              Residual                Time (s)   
+|------------------------------------------------------
+|   1		 3.7556628796		     0.22
+|   2		 1.4619571598		     0.22
+|   3		 0.5730100057		     0.20
+|   4		 0.2909484510		     0.19
+|   5		 0.1172870654		     0.17
+|   6		 0.0344869606		     0.15
+|   7		 0.0191205667		     0.14
+|   8		 0.0081421176		     0.12
+|   9		 0.0031951409		     0.23
+|  10		 0.0016014931		     0.10
+|  11		 0.0007028270		     0.10
+|  12		 0.0003932448		     0.09
+|  13		 0.0001329815		     0.08
+|  14		 0.0000446609		     0.08
+
+|Converged in 14 iterations:
+
+CASSCF Transition dipole gradients for singlet transition 1 -> 2
+
+ X Transition Dipole Gradient
+
+ Atom         dMu/dX              dMu/dY              dMu/dZ
+------  -----------------  -----------------  -----------------
+    1       2.6413585161      -1.8671717080      -6.1424024744
+    2       1.7311693127       2.5202602085      -1.4781813425
+    3       4.1373507735      -0.9700365451       1.2183389441
+    4       1.5808905966      -2.5413542894       2.1917736876
+    5       2.8510665227       2.3316428948       0.3634297351
+    6       2.5904586043      -4.6100410045      -5.7676734634
+    7     -10.0435078790      -1.8715377296      -9.0831351739
+    8       8.1082564825      -2.6572734075      -1.5940286313
+    9      -0.0092598647      -0.9309093281      -0.2892803334
+   10       8.5533296453       5.9482687065      15.7855442991
+   11      -0.8627176069       2.6038860006       3.2815810354
+   12       1.2242093138       1.1232152582       2.0416908526
+   13      -0.0612401959       1.1155854561       4.0524121045
+   14       0.7691055946      -0.6852797125       1.8276480496
+   15       1.0304384010      -4.2243624575      -3.3983728112
+   16       1.9941508625      -1.4988726292      -2.9781211435
+   17       0.6362662875       1.8159003178       5.7868213586
+   18       1.3073527267       1.8604757687       3.2173036515
+   19      -4.1178734451      -0.4584425069      -5.3690207939
+   20      -2.1637083116      -1.1347199033      -2.9522060120
+   21      -5.2033912070       2.1807895456       4.9998897129
+   22      -1.9552385933       1.9461316482       2.6549623791
+   23      -1.2510842605      -0.0952501574      -0.3921026550
+   24     -15.2696487152       4.2449996411      -3.2213327516
+   25       2.1878630474      -2.5502624562       0.2475605444
+   26      -2.3462760712      -0.6964358893      -2.3633075289
+   27       1.8829324908      -0.8736480982      -2.6808769527
+
+ Y Transition Dipole Gradient
+
+ Atom         dMu/dX              dMu/dY              dMu/dZ
+------  -----------------  -----------------  -----------------
+    1       2.6074166237      -1.7736597421      -6.0889572197
+    2       1.7599042532       2.5131666853      -1.5194706104
+    3       4.0995879456      -0.9610738577       1.2096194971
+    4       1.5814221786      -2.5406814427       2.1941133000
+    5       2.8512771026       2.3307886489       0.3671993290
+    6       3.2068131480      -5.0514636352      -5.9016143502
+    7     -10.4124522467      -1.4043749803      -8.4151914146
+    8       8.0002364676      -2.5988255700      -1.6799562300
+    9      -0.3357196142      -1.1050144193      -0.6072244079
+   10       8.7629788495       6.0396557373      16.0988743407
+   11      -0.1440419628       1.9391558709       2.6534460870
+   12       0.0322623804       1.2294567287       2.0078906290
+   13      -0.0668724126       1.2002397948       4.0134692460
+   14       1.3112169229      -0.4710384488       2.0469710760
+   15       0.9265098153      -4.1266070645      -3.4970623151
+   16       1.9802461765      -1.5037724460      -2.9814768158
+   17       0.7984454027       1.6779986463       5.9100234687
+   18       1.3064689884       1.8572363410       3.1966507977
+   19      -3.7411982517      -0.6508149032      -5.4945057180
+   20      -2.1571782270      -1.1400115434      -2.9704124216
+   21      -5.4177084894       2.2048451758       4.7644543113
+   22      -1.9637085400       1.9505231583       2.6426954836
+   23      -1.3630829661       0.3155068901       0.1940086375
+   24     -15.3516809625       4.2019489738      -3.3331396350
+   25       2.2038527163      -2.5602757004       0.2448898317
+   26      -2.3483661309      -0.6972868281      -2.3712215485
+   27       1.8850715803      -0.8776391801      -2.6858195475
+
+ Z Transition Dipole Gradient
+
+ Atom         dMu/dX              dMu/dY              dMu/dZ
+------  -----------------  -----------------  -----------------
+    1       2.5700504140      -1.7724329074      -6.0227316418
+    2       1.7848810691       2.5390981225      -1.5475868155
+    3       4.1160983047      -0.9618464215       1.2162174943
+    4       1.5802485877      -2.5404248682       2.1923565676
+    5       2.8502419373       2.3309080679       0.3667630311
+    6       3.1901196341      -5.0707420358      -6.2418045441
+    7     -10.4821190943      -1.3883548960      -8.1653726234
+    8       7.9588881481      -2.5052145001      -1.3839272604
+    9       0.0389745868      -1.0360190199      -0.6698829222
+   10       8.6516483292       6.0042926466      15.9282884937
+   11       0.0051571413       2.0909383627       2.0253633659
+   12      -0.3015482502       1.3309560310       2.1185450123
+   13      -0.0838835315       1.1740489684       4.0230095591
+   14       1.5327717489      -0.4774153680       2.4713408295
+   15       0.5631234898      -4.1115443703      -3.6910863367
+   16       1.9824410126      -1.5155070352      -2.9857903118
+   17       0.8608629210       1.6195289225       5.8917716147
+   18       1.3169481990       1.8664419545       3.1834629505
+   19      -3.4641490468      -0.8613536953      -5.5108410187
+   20      -2.1463528725      -1.1330672450      -2.9821160658
+   21      -5.5802281704       2.1294812099       4.6910471233
+   22      -1.9649089302       1.9568828314       2.6291903834
+   23      -1.4938748627       0.3419864602       0.5999808379
+   24     -15.2419954614       4.1187355576      -3.3482823817
+   25       2.2136463899      -2.5571544610       0.2399314788
+   26      -2.3481872438      -0.6942293070      -2.3717134588
+   27       1.8809167410      -0.8759902766      -2.6834942889
+
+Printing MM field on QM atoms:
+       -0.01162024285970         0.00589875911833         0.00834840617144
+       -0.00957156842474        -0.00199955752591         0.01273675896383
+       -0.01175443913348         0.00842843225816         0.00543978275649
+       -0.01317250992770         0.00809843506893         0.00475483080701
+       -0.01584762134260         0.00589420005020         0.00679777266638
+       -0.02011844630760         0.00959912032233         0.00163550106940
+       -0.01584570419614         0.00856582000973        -0.01236246640065
+       -0.01088281933466         0.00946154273420         0.00607227773990
+       -0.00165742008355         0.01082282977375         0.01410614301031
+        0.00386229963532         0.01947404317710         0.03907195839424
+       -0.00192555856305         0.00221421545910        -0.00694248698181
+        0.00383947991423        -0.00437762614183        -0.00575997708919
+        0.00791717992335        -0.01013647782957        -0.00793136012626
+       -0.00100042819828        -0.00188622464045        -0.00427012320878
+       -0.00000287582791         0.00147751945132        -0.00089669146629
+        0.00976834583977         0.00076065075567         0.00068343790887
+       -0.00488155692909         0.00022592149113        -0.00555954259792
+       -0.00613514237278         0.00247113217288        -0.00466607872564
+       -0.01196173119661         0.00971533612991         0.00093002301974
+       -0.01519678374777         0.01612863017749         0.01253366737061
+       -0.00876489182539         0.00339402735086        -0.01024195424178
+       -0.00528380160194         0.00359067003128        -0.01289166212153
+       -0.02159947842440         0.00955536380546        -0.01217161292788
+       -0.04262927235701         0.01561566308331        -0.02327874224034
+       -0.00002486066202         0.00915791110811         0.00244034642751
+       -0.01428244452727         0.00799381093001         0.01332999023169
+       -0.00707746518467         0.00412736088958         0.00049421019003
+| Total processing time: 42.98 sec 
+
+| Job finished: Wed Oct 25 15:22:44 2023
+
