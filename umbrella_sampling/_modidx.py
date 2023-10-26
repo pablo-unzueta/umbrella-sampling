@@ -5,4 +5,12 @@ d = { 'settings': { 'branch': 'main',
                 'doc_host': 'https://pablo-unzueta.github.io',
                 'git_url': 'https://github.com/pablo-unzueta/umbrella-sampling',
                 'lib_path': 'umbrella_sampling'},
-  'syms': {'umbrella_sampling.core': {'umbrella_sampling.core.foo': ('core.html#foo', 'umbrella_sampling/core.py')}}}
+  'syms': { 'umbrella_sampling.core': {'umbrella_sampling.core.compute_cv': ('umbrella.html#compute_cv', 'umbrella_sampling/core.py')},
+            'umbrella_sampling.file-io': { 'umbrella_sampling.file-io.get_cas_tdip_of_states': ( 'file_io.html#get_cas_tdip_of_states',
+                                                                                                 'umbrella_sampling/file-io.py'),
+                                           'umbrella_sampling.file-io.get_casscf_energy_of_state': ( 'file_io.html#get_casscf_energy_of_state',
+                                                                                                     'umbrella_sampling/file-io.py')},
+            'umbrella_sampling.umbrella': { 'umbrella_sampling.umbrella.biased_potential': ( 'umbrella.html#biased_potential',
+                                                                                             'umbrella_sampling/umbrella.py'),
+                                            'umbrella_sampling.umbrella.compute_cv': ( 'umbrella.html#compute_cv',
+                                                                                       'umbrella_sampling/umbrella.py')}}}
