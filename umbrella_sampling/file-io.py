@@ -4,17 +4,21 @@
 __all__ = ['get_casscf_energy_of_state', 'get_cas_tdip_of_states']
 
 # %% ../nbs/01_file_io.ipynb 3
+from pathlib import Path
+import re
+
+# %% ../nbs/01_file_io.ipynb 4
 def get_casscf_energy_of_state(
     file: Path,  # Path to TC output file
     state: int,  # State ID (1-indexed)
-) -> float:
-    """Returns CASSCF energy (in Hatree) of state"""
+) -> float: # Energy in Hartree
+    """Returns CASSCF energy of state"""
     with open(file, "r") as f:
         for line in f:
             if f"Singlet state  {state} energy:" in line:
                 return float(line.split()[-1])
 
-# %% ../nbs/01_file_io.ipynb 6
+# %% ../nbs/01_file_io.ipynb 7
 def get_cas_tdip_of_states(
     file: Path,  # Path to TC output file
 ) -> dict:
